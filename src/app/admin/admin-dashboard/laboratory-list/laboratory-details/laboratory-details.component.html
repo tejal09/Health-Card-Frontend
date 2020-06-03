@@ -1,0 +1,64 @@
+<div class="container">
+    <h2>Laboratory Details</h2>
+    
+    <table class="table table-dark">
+      
+    
+        <tr>
+            <th>Laboratory Name</th>
+            <td>{{laboratoryDetails.laboratory_name}}</td>
+        </tr>
+
+        <tr>
+            <th>License Number</th>
+            <td>{{laboratoryDetails.license_number}}</td>
+        </tr>
+
+        <tr>
+            <th>Established Date</th>
+            <td>{{laboratoryDetails.established_date | date}}</td>
+        </tr>
+
+        <tr>
+            <th>Emergency Contact Number</th>
+            <td>{{laboratoryDetails.emergency_contact_number}}</td>
+        </tr>
+
+        <tr>
+            <th>Email Address</th>
+            <td>{{laboratoryDetails.email}}</td>
+        </tr>
+   
+        <tr>
+            <th>Street</th>
+            <td>{{laboratoryDetails.street}}</td>
+        </tr>
+   
+        <tr>
+            <th>City</th>
+            <td>{{laboratoryDetails.city}}</td>
+        </tr>
+   
+        <tr>
+            <th>State</th>
+            <td>{{laboratoryDetails.state}}</td>
+        </tr>
+   
+        <tr>
+            <th>Pincode</th>
+            <td>{{laboratoryDetails.pincode}}</td>
+        </tr>
+   
+        <tr>
+            <th>Landmark</th>
+            <td>{{laboratoryDetails.landmark}}</td>
+        </tr>
+   
+        <a [href]="laboratoryDetails.laboratory_document" target="_blank">View Document PDF</a>
+      
+   
+    </table>
+
+
+ 
+</div>

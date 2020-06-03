@@ -1,0 +1,57 @@
+<div class="container">
+    <h2>Case Details</h2>
+    <table class="table table-dark">
+  
+        <tr>
+            <th>Disease Name</th>
+            <td>{{caseDetails.disease_name}}</td>
+        </tr>
+  
+        <tr>
+            <th>Observations</th>
+            <td><pre>{{caseDetails.disease_observation}}</pre></td>
+        </tr>
+      </table>
+  
+      <br>
+      <h5>Medicines Prescribed</h5>
+      <hr>  
+  
+      <table class="table table-dark" style=" border-collapse: collapse; width: 60%;">
+        <tr>
+          <th>Sr. No.</th>
+          <th>Medicines</th>
+          <th>Dosage</th>
+          <th>Taken</th>
+            <!-- <td>{{caseDetails.temp}}</td> -->
+        </tr>
+  
+  
+  
+        <tr *ngFor="let medicine of caseDetails.medicines; let i = index">
+          <td>{{i+1}}</td>
+             <td>{{medicine.medicine_name}}</td>
+             <td>{{medicine.medicine_dosage}}</td>
+            <td>{{medicine.isTaken}}</td>
+           </tr>
+          </table>
+  
+          <br>
+            <h5>Test Reuired</h5>
+          <hr> 
+  
+            <table class="table table-dark" style=" border-collapse: collapse; width: 40%;">
+                <tr>
+                  <th>Sr. No.</th>
+                  <th>Lab Test </th>
+                </tr>
+  
+  
+              <tr *ngFor="let test_required of caseDetails.test_required; let i = index">
+                <td>{{i+1}}</td>
+                  <td>{{test_required}}</td>
+                </tr>
+            </table>
+         
+  
+  </div>

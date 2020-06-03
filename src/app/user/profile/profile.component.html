@@ -1,0 +1,122 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="jumbotron mt-5">
+      <div class="col-sm-8 mx-auto">
+        <h1 class="text-center">PROFILE</h1>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-12 text-center" style="padding-bottom: 20px;" (click)="ViewCases()">
+        <div class="row main-box-layout img-thumbnail">
+          <div class="col-lg-12 col-sm-12 col-12 box-icon-section bg-primary">
+            <i class="fa fa-th-list" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+            <p>View Cases</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <img src={{details.identity.profile_photo}}  class="img-fluid" height="20%" width="20%">
+      </div>
+      <table class="table col-md-6 mx-auto">
+
+        
+        
+        <tr>
+          <td>Unique ID</td>
+          <td>{{ details.identity.user_id }}</td>
+        </tr>
+
+
+        <tr>
+          <td>First Name</td>
+          <td>{{ details.identity.first_name }}</td>
+        </tr>
+
+        <tr>
+          <td>Last Name</td>
+          <td>{{ details.identity.last_name }}</td>
+        </tr>
+
+        <tr>
+          <td>Email</td>
+          <td>{{ details.identity.email }}</td>
+        </tr>
+
+
+        <tr>
+          <td>Father Name</td>
+            <td>{{details.identity.father_name}}</td>
+        </tr>
+
+        <tr>
+          <td>Mother Name</td>
+            <td>{{details.identity.mother_name}}</td>
+        </tr>
+
+        <tr>
+          <td>Date of Birth</td>
+            <td>{{details.identity.dob | date}}</td>
+        </tr>
+
+        <tr>
+          <td>Gender</td>
+            <td>{{details.identity.gender}}</td>
+        </tr>
+
+        <tr>
+          <td>Contact Number</td>
+            <td>{{details.identity.contact_number}}</td>
+        </tr>
+
+        <tr>
+          <td>Emergency Contact Number</td>
+            <td>{{details.identity.emergency_contact_number}}</td>
+        </tr>
+
+        <tr>
+          <td>Blood Group</td>
+            <td>{{details.identity.blood_group}}</td>
+        </tr>
+        <tr>
+          <td>Marital Status</td>
+            <td>{{details.identity.marital_status}}</td>
+        </tr>
+        <tr>
+          <td>Aadhar Numberr</td>
+            <td>{{details.identity.aadhar_number}}</td>
+        </tr>
+        <tr>
+          <td>Street</td>
+            <td>{{details.identity.street}}</td>
+        </tr>
+        <tr>
+          <td>City</td>
+            <td>{{details.identity.city}}</td>
+        </tr>
+        <tr>
+          <td>State</td>
+            <td>{{details.identity.state}}</td>
+        </tr>
+        <tr>
+          <td>Pincode</td>
+            <td>{{details.identity.pincode}}</td>
+        </tr>
+        <tr>
+          <td>Landmark</td>
+            <td>{{details.identity.landmark}}</td>
+        </tr>
+
+
+   
+       
+      </table>
+    </div>
+  </div>
+  </body>

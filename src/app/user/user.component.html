@@ -1,0 +1,12 @@
+<table class="table">
+    <tr *ngFor="let user of users">
+        <td class="text-left">
+            <a [routerLink]="['/user-details/', user._id]">
+            <!-- <a (click)="edit(user)"> -->
+                <span>{{user.name}}</span>
+                <!-- <input *ngIf="user==editUser" [(ngModel)]="user.name" (blur)="update(user)" (keyup.enter)="update(user)"> -->
+            </a>
+        </td>
+    </tr>
+</table> 
+

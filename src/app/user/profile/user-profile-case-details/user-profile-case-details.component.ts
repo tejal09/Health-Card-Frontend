@@ -1,0 +1,43 @@
+import { Component, OnInit } from '@angular/core';
+import { ParamMap, ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'app-user-profile-case-details',
+  templateUrl: './user-profile-case-details.component.html',
+  styleUrls: ['./user-profile-case-details.component.css']
+})
+export class UserProfileCaseDetailsComponent implements OnInit {
+
+  case_id:string
+  caseDetails: any
+  details;
+
+ 
+
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router:Router)  { 
+    this.route.paramMap.subscribe((parameter: ParamMap) => {
+      if (parameter.has('case_id')) {
+        this.case_id = parameter.get('case_id');
+        // console.log(this.patientID);
+      }
+    })
+   }
+
+
+  ngOnInit() {
+    this.getCaseDetails();
+
+
+  }
+
+  getCaseDetails(){
+
+
+    this.httpClient.get(`http://127.0.0.1:5000/api/user/cases/case-details/${this.case_id}`).subscribe(response => {
+      this.caseDetails = response;
+    console.log(this.caseDetails);
+    console.log(response)
+  });
+}
+}
